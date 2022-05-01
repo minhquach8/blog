@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
+const route = require("./routes");
 
 /* Initialize app */
 const app = express();
@@ -15,14 +16,11 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(morgan("dev"));
 
-/* -------- Routes -------- */
-app.get("/", (req, res) => {
-	res.render("home");
-});
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get("/news", (req, res) => {
-	res.render("news");
-});
+/* -------- Routes -------- */
+route(app);
 
 /* ------- Listening ------ */
 const PORT = 3000;

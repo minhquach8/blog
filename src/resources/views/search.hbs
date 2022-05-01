@@ -1,0 +1,29 @@
+<h2 class="mt-4">This is Search page</h2>
+<div class="my-4">
+	<form method="GET">
+		<div class="form-group">
+			<label for="search-input">Từ khóa</label>
+			<input
+				type="text"
+				name="blog"
+				class="form-control"
+				id="search-input"
+				placeholder="Nhập nội dung tìm kiếm"
+			/>
+		</div>
+		<div class="input-group my-3">
+			<div class="input-group-prepend">
+				<label
+					class="input-group-text"
+					for="selectionOption"
+				>Options</label>
+			</div>
+			<select class="custom-select" name="category" id="selectionOption">
+				<option selected>--Thể loại--</option>
+				<option value="programming">Lập trình</option>
+				<option value="science">Khoa học</option>
+			</select>
+		</div>
+		<button type="submit" class="btn my-2 btn-primary">Tìm Kiếm</button>
+	</form>
+</div>
