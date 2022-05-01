@@ -1,6 +1,18 @@
 @import './variable';
 
 h1 {
-    background-color: $background-color;
-    color: green;
+	background-color: $background-color;
+	color: green;
+}
+
+.card-description {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.card-title-link {
+	text-decoration: none;
+	color: #333;
 }
